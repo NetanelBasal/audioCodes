@@ -1,8 +1,17 @@
 .mainBox{
   width: 1081px;
-  padding: 20px;
   border: 1px solid #eeeeee;
   margin: 20px 0 0 20px;
+
+
+.Box{
+  weidth: 100%;
+  padding: 20px 20px 5px 20px;
+  height: 575px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+
   header {
     width:100%;
     white-space: nowrap;
@@ -11,28 +20,124 @@
     display: inline-block;
   }
 }
-.mainBox h5{
+.Box h5{
   font-size: 16px;
   width:40%;
 }
-.mainBox nav {
+.Box nav {
   width:60%;
   ul{
   list-style: none;
-  display: inline-block;
   display:flex;
+  margin-bottom: 0;
     a{
       text-decoration: none;
       color: @text-color;
     }
     li{
       padding-right: 25px;
+      &.selectedDot {
+        .bullet-selectedTab;
+      }
+    }
+    a.selected-tab{
+      color: #0096E1;
+      border-bottom: 3px solid #0096E1;
+      padding-bottom: 0.2em;
+      font-weight: 700;
     }
   }
 }
-.group{
-  width: 50%;
-  h6{
-    font-size: 12px;
+
+.groups{
+  width:100%;
+  white-space: nowrap;
+  display: inline-block;
+  .leftColumn{
+    width:49%;
+    float:left;
+  }
+  .rightColumn{
+    width:49%;
+    float:right;
+  }
+  .group{
+
+    h6{
+      .group-header;
+    }
+    table{
+      width: 100%;
+
+      tr td{
+        vertical-align: middle;
+        padding-bottom: 7px;
+        &:first-child {
+          width:40%;
+        }
+        &:last-child {
+          width:60%;
+        }
+      }
+      label, input, select{
+        display: inline-block;
+        width:100%;
+      }
+      label{
+        padding-left: 16px;
+        font-style: normal;
+        font-size: 12px;
+        position: relative;
+        &.dotted {
+          .bullet(grey);
+        }
+        &.triangle {
+          .triangle-right;
+        }
+      }
+      input{
+        border: 1px solid #D2D0D0;
+      }
+    }
   }
 }
+.disabled-1{
+  .disabled(#FCFCFC);
+}
+.disabled-2{
+  .disabled(#FFFDE7);
+}
+footer{
+  width:100%;
+  border-top: 1px solid #eeeeee;
+  font-size: 12px;
+  .btns{
+    width:40%;
+    margin: 1em 42%;
+    .btnCancel{
+      display: inline-block;
+      margin-left: 2em;
+      a{
+        text-decoration: none;
+        color: @btn-text-blue;
+
+      }
+    }
+    .btnApply{
+      width: 15%;
+      background-color: @btn-box-color;
+      display: inline-block;
+      margin-left: 2em;
+      text-align: center;
+      border-radius: 8%;
+      padding:0.5em;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+}
+
+

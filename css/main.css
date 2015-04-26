@@ -357,47 +357,188 @@ th {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+.text-bold {
+  font-weight: bold;
+}
+.group-header {
+  background-color: #eeeeee;
+  padding: 10px 0 10px 16px;
+  font-size: 12px;
+}
+.triangle-right::before {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid grey;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  content: '';
+}
 .mainBox {
   width: 1081px;
-  padding: 20px;
   border: 1px solid #eeeeee;
   margin: 20px 0 0 20px;
 }
-.mainBox header {
+.mainBox .Box {
+  weidth: 100%;
+  padding: 20px 20px 5px 20px;
+  height: 575px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.mainBox .Box header {
   width: 100%;
   white-space: nowrap;
 }
-.mainBox nav,
-.mainBox h5 {
+.mainBox .Box nav,
+.mainBox .Box h5 {
   display: inline-block;
 }
-.mainBox h5 {
+.mainBox .Box h5 {
   font-size: 16px;
   width: 40%;
 }
-.mainBox nav {
+.mainBox .Box nav {
   width: 60%;
 }
-.mainBox nav ul {
+.mainBox .Box nav ul {
   list-style: none;
-  display: inline-block;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 0;
 }
-.mainBox nav ul a {
+.mainBox .Box nav ul a {
   text-decoration: none;
   color: #3d4c5a;
 }
-.mainBox nav ul li {
+.mainBox .Box nav ul li {
   padding-right: 25px;
 }
-.group {
-  width: 50%;
+.mainBox .Box nav ul li.selectedDot::after {
+  width: 7px;
+  height: 7px;
+  position: relative;
+  right: 106%;
+  content: '';
+  border-radius: 50%;
+  background-color: #F10089;
+  display: inline-block;
 }
-.group h6 {
+.mainBox .Box nav ul a.selected-tab {
+  color: #0096E1;
+  border-bottom: 3px solid #0096E1;
+  padding-bottom: 0.2em;
+  font-weight: 700;
+}
+.mainBox .groups {
+  width: 100%;
+  white-space: nowrap;
+  display: inline-block;
+}
+.mainBox .groups .leftColumn {
+  width: 49%;
+  float: left;
+}
+.mainBox .groups .rightColumn {
+  width: 49%;
+  float: right;
+}
+.mainBox .groups .group h6 {
+  background-color: #eeeeee;
+  padding: 10px 0 10px 16px;
   font-size: 12px;
+}
+.mainBox .groups .group table {
+  width: 100%;
+}
+.mainBox .groups .group table tr td {
+  vertical-align: middle;
+  padding-bottom: 7px;
+}
+.mainBox .groups .group table tr td:first-child {
+  width: 40%;
+}
+.mainBox .groups .group table tr td:last-child {
+  width: 60%;
+}
+.mainBox .groups .group table label,
+.mainBox .groups .group table input,
+.mainBox .groups .group table select {
+  display: inline-block;
+  width: 100%;
+}
+.mainBox .groups .group table label {
+  padding-left: 16px;
+  font-style: normal;
+  font-size: 12px;
+  position: relative;
+}
+.mainBox .groups .group table label.dotted::after {
+  width: 7px;
+  height: 7px;
+  top: 22%;
+  position: absolute;
+  left: 95%;
+  content: '';
+  border-radius: 50%;
+  background-color: grey;
+  display: inline-block;
+}
+.mainBox .groups .group table label.triangle::before {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid grey;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  content: '';
+}
+.mainBox .groups .group table input {
+  border: 1px solid #D2D0D0;
+}
+.mainBox .disabled-1 {
+  background-color: #fcfcfc;
+  cursor: not-allowed;
+}
+.mainBox .disabled-2 {
+  background-color: #fffde7;
+  cursor: not-allowed;
+}
+.mainBox footer {
+  width: 100%;
+  border-top: 1px solid #eeeeee;
+  font-size: 12px;
+}
+.mainBox footer .btns {
+  width: 40%;
+  margin: 1em 42%;
+}
+.mainBox footer .btns .btnCancel {
+  display: inline-block;
+  margin-left: 2em;
+}
+.mainBox footer .btns .btnCancel a {
+  text-decoration: none;
+  color: #397bcc;
+}
+.mainBox footer .btns .btnApply {
+  width: 15%;
+  background-color: #0096e1;
+  display: inline-block;
+  margin-left: 2em;
+  text-align: center;
+  border-radius: 8%;
+  padding: 0.5em;
+}
+.mainBox footer .btns .btnApply a {
+  text-decoration: none;
+  color: white;
 }
 body {
   color: #3d4c5a;
