@@ -1,9 +1,10 @@
-@base: blue;
-
-h1 {
-  color:@base;
-  a {
-    display: flex;
+@import 'reset.less';
+@import '_vars.less';
+@import 'proxyRegistration/proxyRegistration.less';
+* {
+  box-sizing: border-box;
 }
-  box-sizing:border-box;
+body{
+  color: @text-color;
+  font-family: 'Open Sans', sans-serif;
 }

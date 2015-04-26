@@ -11,7 +11,7 @@ gulp.task('less', function() {
       browsers: ['last 5 versions'],
       cascade: false
     }))
-    .pipe($.minifyCss())
+    //.pipe($.minifyCss())
     .pipe(gulp.dest('./css'))
     .pipe(reload({stream:true}));
 });
