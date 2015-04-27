@@ -372,9 +372,20 @@ th {
   border-left: 10px solid grey;
   border-bottom: 5px solid transparent;
   position: absolute;
-  bottom: 25%;
+  bottom: 40%;
   left: 0;
   content: '';
+}
+.bullet-selectedTab::after {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  right: 95%;
+  top: 31%;
+  content: '';
+  border-radius: 50%;
+  background-color: #F10089;
+  display: inline-block;
 }
 .mainBox {
   width: 1081px;
@@ -392,92 +403,85 @@ th {
   width: 100%;
   white-space: nowrap;
 }
-.mainBox .Box nav,
-.mainBox .Box h5 {
+.mainBox .Box header nav,
+.mainBox .Box header h5 {
   display: inline-block;
 }
-.mainBox .Box h5 {
+.mainBox header h5 {
   font-size: 16px;
   width: 40%;
 }
-.mainBox .Box nav {
+.mainBox header nav {
   width: 60%;
 }
-.mainBox .Box nav ul {
+.mainBox header nav ul {
   list-style: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 0;
+  position: relative;
 }
-.mainBox .Box nav ul a {
-  text-decoration: none;
-  color: #3d4c5a;
-}
-.mainBox .Box nav ul li {
+.mainBox header nav ul li {
+  display: inline;
   padding-right: 25px;
 }
-.mainBox .Box nav ul li.selectedDot::after {
+.mainBox header nav ul li.selectedDot::after {
   width: 7px;
   height: 7px;
-  position: relative;
-  right: 106%;
+  position: absolute;
+  right: 95%;
+  top: 31%;
   content: '';
   border-radius: 50%;
   background-color: #F10089;
   display: inline-block;
 }
-.mainBox .Box nav ul a.selected-tab {
+.mainBox header nav ul a {
+  text-decoration: none;
+  color: #3d4c5a;
+}
+.mainBox header nav ul a.selected-tab {
   color: #0096E1;
   border-bottom: 3px solid #0096E1;
   padding-bottom: 0.2em;
   font-weight: 700;
 }
-.mainBox .groups {
+.mainBox .Box .groups {
   width: 100%;
   white-space: nowrap;
-  display: inline-block;
 }
-.mainBox .groups .leftColumn {
-  width: 49%;
-  float: left;
+.mainBox .Box .groups .leftColumn,
+.mainBox .Box .groups .rightColumn {
+  width: 50%;
+  display: inline-table;
 }
-.mainBox .groups .rightColumn {
-  width: 49%;
-  float: right;
-}
-.mainBox .groups .group h6 {
+.mainBox .Box .groups .group h6 {
   background-color: #eeeeee;
   padding: 10px 0 10px 16px;
   font-size: 12px;
 }
-.mainBox .groups .group table {
+.mainBox .Box .groups .group table {
   width: 100%;
 }
-.mainBox .groups .group table tr td {
+.mainBox .Box .groups .group table tr td {
   vertical-align: middle;
   padding-bottom: 7px;
+  position: relative;
+  float: left;
 }
-.mainBox .groups .group table tr td:first-child {
+.mainBox .Box .groups .group table tr td:first-child {
   width: 40%;
 }
-.mainBox .groups .group table tr td:last-child {
+.mainBox .Box .groups .group table tr td:last-child {
   width: 60%;
 }
-.mainBox .groups .group table label,
-.mainBox .groups .group table input,
-.mainBox .groups .group table select {
-  display: inline-block;
+.mainBox .Box .groups .group table label,
+.mainBox .Box .groups .group table input,
+.mainBox .Box .groups .group table select {
   width: 100%;
 }
-.mainBox .groups .group table label {
+.mainBox .Box .groups .group table label {
   padding-left: 16px;
-  font-style: normal;
   font-size: 12px;
-  position: relative;
 }
-.mainBox .groups .group table label.dotted::after {
+.mainBox .Box .groups .group table label.dotted::after {
   width: 7px;
   height: 7px;
   top: 22%;
@@ -488,25 +492,25 @@ th {
   background-color: grey;
   display: inline-block;
 }
-.mainBox .groups .group table label.triangle::before {
+.mainBox .Box .groups .group table label.triangle::before {
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
   border-left: 10px solid grey;
   border-bottom: 5px solid transparent;
   position: absolute;
-  bottom: 25%;
+  bottom: 40%;
   left: 0;
   content: '';
 }
-.mainBox .groups .group table input {
+.mainBox .Box .groups .group table input {
   border: 1px solid #D2D0D0;
 }
-.mainBox .disabled-1 {
+.mainBox .Box .groups .group table .disabled-1 {
   background-color: #fcfcfc;
   cursor: not-allowed;
 }
-.mainBox .disabled-2 {
+.mainBox .Box .groups .group table .disabled-2 {
   background-color: #fffde7;
   cursor: not-allowed;
 }

@@ -1,143 +1,131 @@
+
 .mainBox{
   width: 1081px;
   border: 1px solid #eeeeee;
   margin: 20px 0 0 20px;
-
-
-.Box{
-  weidth: 100%;
-  padding: 20px 20px 5px 20px;
-  height: 575px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-
-
-  header {
+  .Box{
+    weidth: 100%;
+    padding: 20px 20px 5px 20px;
+    height: 575px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    header {
+      width:100%;
+      white-space: nowrap;
+      nav, h5{
+        display: inline-block;
+      }
+    }
+  }
+  header h5{
+    font-size: 16px;
+    width:40%;
+  }
+  header nav {
+    width:60%;
+    ul{
+      list-style: none;
+      position: relative;
+      li{
+        display: inline;
+        padding-right: 25px;
+        &.selectedDot {
+          .bullet-selectedTab;
+        }
+      }
+      a{
+        text-decoration: none;
+        color: @text-color;
+      }
+      a.selected-tab{
+        color: #0096E1;
+        border-bottom: 3px solid #0096E1;
+        padding-bottom: 0.2em;
+        font-weight: 700;
+      }
+    }
+  }
+  .Box .groups{
     width:100%;
     white-space: nowrap;
-  }
-  nav, h5{
-    display: inline-block;
-  }
-}
-.Box h5{
-  font-size: 16px;
-  width:40%;
-}
-.Box nav {
-  width:60%;
-  ul{
-  list-style: none;
-  display:flex;
-  margin-bottom: 0;
-    a{
-      text-decoration: none;
-      color: @text-color;
+
+    .leftColumn, .rightColumn{
+      width:50%;
+      display: inline-table;
     }
-    li{
-      padding-right: 25px;
-      &.selectedDot {
-        .bullet-selectedTab;
+    .group{
+      h6{
+        .group-header;
       }
-    }
-    a.selected-tab{
-      color: #0096E1;
-      border-bottom: 3px solid #0096E1;
-      padding-bottom: 0.2em;
-      font-weight: 700;
-    }
-  }
-}
+      table{
+        width: 100%;
 
-.groups{
-  width:100%;
-  white-space: nowrap;
-  display: inline-block;
-  .leftColumn{
-    width:49%;
-    float:left;
-  }
-  .rightColumn{
-    width:49%;
-    float:right;
-  }
-  .group{
-
-    h6{
-      .group-header;
-    }
-    table{
-      width: 100%;
-
-      tr td{
-        vertical-align: middle;
-        padding-bottom: 7px;
-        &:first-child {
-          width:40%;
+        tr td{
+          vertical-align: middle;
+          padding-bottom: 7px;
+          position: relative;
+          &:first-child {
+            width:40%;
+          }
+          &:last-child {
+            width:60%;
+          }
+          float: left;
         }
-        &:last-child {
-          width:60%;
+        label, input, select{
+          width:100%;
+        }
+        label{
+          padding-left: 16px;
+          font-size: 12px;
+
+          &.dotted {
+            .bullet(grey);
+          }
+          &.triangle {
+            .triangle-right;
+          }
+        }
+        input{
+          border: 1px solid #D2D0D0;
+        }
+        .disabled-1{
+          .disabled(#FCFCFC);
+        }
+        .disabled-2{
+          .disabled(#FFFDE7);
         }
       }
-      label, input, select{
+    }
+  }
+  footer{
+    width:100%;
+    border-top: 1px solid #eeeeee;
+    font-size: 12px;
+    .btns{
+      width:40%;
+      margin: 1em 42%;
+      .btnCancel{
         display: inline-block;
-        width:100%;
-      }
-      label{
-        padding-left: 16px;
-        font-style: normal;
-        font-size: 12px;
-        position: relative;
-        &.dotted {
-          .bullet(grey);
-        }
-        &.triangle {
-          .triangle-right;
+        margin-left: 2em;
+        a{
+          text-decoration: none;
+          color: @btn-text-blue;
         }
       }
-      input{
-        border: 1px solid #D2D0D0;
+      .btnApply{
+        width: 15%;
+        background-color: @btn-box-color;
+        display: inline-block;
+        margin-left: 2em;
+        text-align: center;
+        border-radius: 8%;
+        padding:0.5em;
+        a{
+          text-decoration: none;
+          color: white;
+        }
       }
     }
   }
 }
-.disabled-1{
-  .disabled(#FCFCFC);
-}
-.disabled-2{
-  .disabled(#FFFDE7);
-}
-footer{
-  width:100%;
-  border-top: 1px solid #eeeeee;
-  font-size: 12px;
-  .btns{
-    width:40%;
-    margin: 1em 42%;
-    .btnCancel{
-      display: inline-block;
-      margin-left: 2em;
-      a{
-        text-decoration: none;
-        color: @btn-text-blue;
-
-      }
-    }
-    .btnApply{
-      width: 15%;
-      background-color: @btn-box-color;
-      display: inline-block;
-      margin-left: 2em;
-      text-align: center;
-      border-radius: 8%;
-      padding:0.5em;
-      a{
-        text-decoration: none;
-        color: white;
-      }
-    }
-  }
-}
-}
-
-
